@@ -1,10 +1,11 @@
-Before deployment:
+# Before deployment:
 1. in vite.config.js you should add the base: to the github pages url (https://username.github.io/Vite-Github-page-deploy/)
 2. in index.html you should remove dot form image src
 3. select on github pages deployment GitHub Actions process
   - choose static HTML -> configure
   - add the followings into the action static.yml file:
 
+# GitHub actions YAML file:
 ```yml
 # Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
