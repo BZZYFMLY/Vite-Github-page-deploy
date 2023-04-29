@@ -34,7 +34,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 18,
+          node-version: '18'
           cache: 'npm'
       - name: Install Dependencies
         run: npm install
@@ -50,3 +50,18 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+        with:
+          # GitHub token
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # GitHub Pages repository
+          repository: github.com/username/username.github.io
+          # Target branch
+          branch: master
+          # Folder to deploy from, relative to the root of the repository
+          folder: dist
+          # Commit message for the deployment commit
+          commit-message: Deploy the app
+          # Author name for deployment commit
+          committer: GitHub Actions
+          # Committer email for deployment commit
+          committer-email:
