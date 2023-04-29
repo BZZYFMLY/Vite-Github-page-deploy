@@ -1,5 +1,5 @@
 Before deployment:
-1. in vite.config.js you should add the base: to the github pages url
+1. in vite.config.js you should add the base: to the github pages url (https://username.github.io/Vite-Github-page-deploy/)
 2. in index.html you should remove dot form image src
 3. select on github pages deployment GitHub Actions process
   - choose static HTML -> configure
@@ -42,7 +42,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 18,
+          node-version: '18'
           cache: 'npm'
       - name: Install Dependencies
         run: npm install
